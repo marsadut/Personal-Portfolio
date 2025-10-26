@@ -128,4 +128,200 @@
             border-bottom: 2px solid #000;
         }
         .job:last-child {
-            border-bottom
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .job h3 {
+            margin: 0 0 5px 0;
+        }
+
+        /* Kolom 3: Education */
+        .education ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* --- Bagian Reviews (Mobile: 1 Kolom) --- */
+        .reviews {
+            text-align: center;
+        }
+
+        .reviews h2 {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+
+        .review-container {
+            display: grid;
+            grid-template-columns: 1fr; /* Mobile: 1 kolom */
+            gap: 20px;
+        }
+
+        .review-card {
+            border: 2px solid #000;
+            border-radius: 15px; 
+            padding: 20px;
+            background-color: #f9f9f9; 
+            text-align: left;
+        }
+        
+        .review-card .quote { font-style: italic; }
+        .review-card .name { font-weight: bold; margin-top: 15px; margin-bottom: 0; }
+        .review-card .title { font-size: 0.9em; color: #555; margin-top: 3px; }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 0.9em;
+        }
+
+
+        /* --- MEDIA QUERY (DESKTOP / LAYAR LEBAR) ---
+          Jika lebar layar 1000px atau lebih, gunakan style di bawah ini
+          untuk menimpa style mobile.
+        */
+        @media (min-width: 1000px) {
+            
+            /* Header: Logo kiri, Nav kanan */
+            header {
+                flex-direction: row; /* Desktop: Susun menyamping */
+                justify-content: space-between;
+                text-align: left;
+            }
+
+            .main-nav ul {
+                margin: 0;
+            }
+
+            .hero {
+                margin: 50px 0;
+            }
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            /* Konten Utama: Ubah jadi 3 kolom */
+            .main-content {
+                grid-template-columns: 1fr 1.5fr 1.5fr; /* Desktop: 3 kolom */
+                gap: 30px;
+            }
+
+            /* Ubah garis pemisah dari horizontal ke vertikal */
+            .main-content section {
+                border-bottom: none; /* Hapus garis bawah */
+                padding: 0 30px 0 0;
+            }
+
+            .projects, .work-experience {
+                border-right: 2px solid #000; /* Tambah garis kanan */
+            }
+
+            /* Reviews: Ubah jadi 3 kolom */
+            .review-container {
+                grid-template-columns: repeat(3, 1fr); /* Desktop: 3 kolom */
+                gap: 30px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">your name</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Frontend Developer</h1>
+            <p>Html only with proper layout, no styling</p>
+        </section>
+
+        <main class="main-content">
+            
+            <section class="projects">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li>HTML Only Portfolio</li>
+                    <li>Calculator</li>
+                    <li>Quiz App</li>
+                    <li>Countdown Timer</li>
+                    <li>Product Upcoming Page</li>
+                </ul>
+            </section>
+            
+            <section class="work-experience">
+                <h2>Work Experience</h2>
+                <div class="job">
+                    <h3>roadmap.sh</h3>
+                    <p>Solved all the frontend projects</p>
+                    <a href="#">Visit my Profile</a>
+                </div>
+                <div class="job">
+                    <h3>OpenSource Work</h3>
+                    <p>Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                    <a href="#">Visit my GitHub Profile</a>
+                </div>
+            </section>
+            
+            <section class="education">
+                <h2>Education</h2>
+                <p>Graduated with 3.76 out of 4 CGPA. Won Acme Hackathon. Organized 30 sessions.</p>
+                <p><strong>Courses I took:</strong></p>
+                <ul>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </section>
+
+        </main>
+
+        <hr class="solid">
+
+        <section class="reviews">
+            <h2>Reviews from my Teachers</h2>
+            
+            <div class="review-container">
+                <div class="review-card">
+                    <p class="quote">"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="title">Assistant Professor</p>
+                </div>
+                <div class="review-card">
+                    <p class="quote">"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="title">Assistant Professor</p>
+                </div>
+                <div class="review-card">
+                    <p class="quote">"John doe was a brilliant student; always stood out with his assignments."</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="title">Assistant Professor</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="solid">
+
+        <footer>
+            <p>© all rights reserved 2025</p>
+        </footer>
+
+    </div> </body>
+</html>
